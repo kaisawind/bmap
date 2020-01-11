@@ -3200,7 +3200,6 @@ window.BMAP_AUTHENTIC_KEY = "";
         return c
     }
     ; function pa(a, b) {
-        console.log('pa', a, b)
         if (b) {
             var c = (1E5 * Math.random()).toFixed(0);
             D._rd["_cbk" + c] = function (a) {
