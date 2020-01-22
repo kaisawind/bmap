@@ -2002,7 +2002,7 @@ window.BMAP_AUTHENTIC_KEY = "";
         },
         main_domain_cdn: {
             baidu: ["gss0.bdstatic.com/9_Q4vHSd2RZ3otebn9fN2DJv", "gss0.baidu.com/9_Q4vXSd2RZ3otebn9fN2DJv", "gss0.bdstatic.com/9_Q4vnSd2RZ3otebn9fN2DJv"],
-            other: ["api.map.baidu.com"],
+            other: [bmapcfg.host + bmapcfg.pathname],
             webmap: ["gss0.baidu.com/6b1IcTe9R1gBo1vgoIiO_jowehsv"]
         },
         map_click: "gsp0.baidu.com/80MWbzKh2wt3n2qy8IqW0jdnxx1xbK",
