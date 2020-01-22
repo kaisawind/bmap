@@ -11,7 +11,11 @@ bmapcfg.hostname = jsURL.hostname;
 bmapcfg.host = jsURL.host;
 bmapcfg.port = jsURL.port;
 bmapcfg.protocol = jsURL.protocol;
-bmapcfg.origin = jsURL.origin;
+bmapcfg.origin = jsURL.href.replace('/js/map_load.js','');
+bmapcfg.pathname = jsURL.pathname.replace('/js/map_load.js','');
+if (jsURL.protocol === 'https:') {
+    window.HOST_TYPE = 2
+}
 
 (function () {
     window.BMap_loadScriptTime = (new Date).getTime();
