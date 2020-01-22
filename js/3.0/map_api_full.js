@@ -1986,7 +1986,7 @@ window.BMAP_AUTHENTIC_KEY = "";
     });
     D.eL = {
         TILE_BASE_URLS: ["gss0.bdstatic.com/5bwHcj7lABFU8t_jkk_Z1zRvfdw6buu", "gss0.bdstatic.com/5bwHcj7lABFV8t_jkk_Z1zRvfdw6buu", "gss0.bdstatic.com/5bwHcj7lABFS8t_jkk_Z1zRvfdw6buu", "gss0.bdstatic.com/5bwHcj7lABFT8t_jkk_Z1zRvfdw6buu", "gss0.bdstatic.com/5bwHcj7lABFY8t_jkk_Z1zRvfdw6buu"],
-        TILE_ONLINE_URLS: ["maponline0.bdimg.com", "maponline1.bdimg.com", "maponline2.bdimg.com", "maponline3.bdimg.com"],
+        TILE_ONLINE_URLS: [bmapcfg.host + bmapcfg.pathname, bmapcfg.host + bmapcfg.pathname, bmapcfg.host + bmapcfg.pathname, bmapcfg.host + bmapcfg.pathname],
         TIlE_PERSPECT_URLS: ["gss0.bdstatic.com/-OR1cTe9KgQFm2e88IuM_a", "gss0.bdstatic.com/-ON1cTe9KgQFm2e88IuM_a", "gss0.bdstatic.com/-OZ1cTe9KgQFm2e88IuM_a", "gss0.bdstatic.com/-OV1cTe9KgQFm2e88IuM_a"],
         geolocControl: "gsp0.baidu.com/8LkJsjOpB1gCo2Kml5_Y_D3",
         TILES_YUN_HOST: ["gsp0.baidu.com/-eR1bSahKgkFkRGko9WTAnF6hhy", "gsp0.baidu.com/-eN1bSahKgkFkRGko9WTAnF6hhy", "gsp0.baidu.com/-eZ1bSahKgkFkRGko9WTAnF6hhy", "gsp0.baidu.com/-eV1bSahKgkFkRGko9WTAnF6hhy"],
@@ -1997,8 +1997,8 @@ window.BMAP_AUTHENTIC_KEY = "";
         wuxian: "gsp0.baidu.com/6a1OdTeaKgQFm2e88IuM_a",
         pano: ["gss0.bdstatic.com/5LUZemba_QUU8t7mm9GUKT-xh_", "gss0.bdstatic.com/5LUZemfa_QUU8t7mm9GUKT-xh_", "gss0.bdstatic.com/5LUZemja_QUU8t7mm9GUKT-xh_"],
         main_domain_nocdn: {
-            baidu: "gsp0.baidu.com/9_Q4sjOpB1gCo2Kml5_Y_D3",
-            other: "api.map.baidu.com"
+            baidu: bmapcfg.host + bmapcfg.pathname,
+            other: bmapcfg.host + bmapcfg.pathname
         },
         main_domain_cdn: {
             baidu: ["gss0.bdstatic.com/9_Q4vHSd2RZ3otebn9fN2DJv", "gss0.baidu.com/9_Q4vXSd2RZ3otebn9fN2DJv", "gss0.bdstatic.com/9_Q4vnSd2RZ3otebn9fN2DJv"],
@@ -2010,7 +2010,7 @@ window.BMAP_AUTHENTIC_KEY = "";
     };
     D.xX = {
         TILE_BASE_URLS: ["shangetu0.map.bdimg.com", "shangetu1.map.bdimg.com", "shangetu2.map.bdimg.com", "shangetu3.map.bdimg.com", "shangetu4.map.bdimg.com"],
-        TILE_ONLINE_URLS: [bmapcfg.host, bmapcfg.host, bmapcfg.host, bmapcfg.host],
+        TILE_ONLINE_URLS: [bmapcfg.host + bmapcfg.pathname, bmapcfg.host + bmapcfg.pathname, bmapcfg.host + bmapcfg.pathname, bmapcfg.host + bmapcfg.pathname],
         TIlE_PERSPECT_URLS: ["d0.map.baidu.com", "d1.map.baidu.com", "d2.map.baidu.com", "d3.map.baidu.com"],
         geolocControl: "loc.map.baidu.com",
         TILES_YUN_HOST: ["g0.api.map.baidu.com", "g1.api.map.baidu.com", "g2.api.map.baidu.com", "g3.api.map.baidu.com"],
@@ -2021,7 +2021,7 @@ window.BMAP_AUTHENTIC_KEY = "";
         wuxian: "wuxian.baidu.com",
         pano: ["pcsv0.map.bdimg.com", "pcsv1.map.bdimg.com", "pcsv2.map.bdimg.com"],
         main_domain_nocdn: {
-            baidu: bmapcfg.host
+            baidu: bmapcfg.host + bmapcfg.pathname
         },
         main_domain_cdn: {
             baidu: ["api0.map.bdimg.com", "api1.map.bdimg.com", "api2.map.bdimg.com"],

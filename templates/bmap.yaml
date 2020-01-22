@@ -1,0 +1,46 @@
+{{ if .Values.bmap.deploy }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bmap
+spec:
+  selector:
+    matchLabels:
+      service: bmap
+      version: {{.Values.bmap.version}}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        service: bmap
+        version: {{.Values.bmap.version}}
+    spec:
+      containers:
+      - name: bmap
+        image: kaisawind/bmap:{{.Values.bmap.version}}
+{{ if .Values.docker.pullPolicy }}
+        imagePullPolicy: {{.Values.docker.pullPolicy}}
+{{ end }}
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bmap
+  labels:
+    service: bmap
+spec:
+{{ if .Values.services.expose_node_port }}
+  type: NodePort
+{{ end }}
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+{{ if .Values.services.expose_node_port }}
+    nodePort: {{.Values.bmap.port}}
+{{ end }}
+  selector:
+    service: bmap
+{{ end }}
