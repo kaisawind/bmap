@@ -1,0 +1,15 @@
+namespace: 
+  deploy: false
+  name: kube-public
+env: prod
+services:
+  expose_node_port: false
+docker:
+  pullPolicy: Always
+public:
+  ingress:
+    deploy: true
+bmap:
+  deploy: true
+  version: km
+  port: 0
