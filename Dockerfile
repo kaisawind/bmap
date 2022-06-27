@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:1.23.0-alpine
 
 LABEL MAINTAINER="kaisawind <wind.kaisa@gmail.com>"
 
